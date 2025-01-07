@@ -1,0 +1,141 @@
+:root {
+    --violet: #674baf;
+    --soft-magenta: #e882e8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--violet);
+    color: white;
+    min-height: 100vh;
+    background-image: url('images/bg-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 4rem 5rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    margin-bottom: 4rem;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    flex: 1;
+}
+
+.illustration {
+    flex: 1;
+}
+
+.illustration img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.register-btn {
+    background: white;
+    color: var(--violet);
+    border: none;
+    padding: 1rem 4rem;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.register-btn:hover {
+    background: var(--soft-magenta);
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.social-icon {
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--soft-magenta);
+    border-color: var(--soft-magenta);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .register-btn {
+        align-self: center;
+    }
+
+    .social-links {
+        justify-content: center;
+        margin-top: 4rem;
+    }
+} 
